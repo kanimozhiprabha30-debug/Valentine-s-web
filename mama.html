@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My Valentine ❤️</title>
+
+<style>
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #ffe6f0;
+  margin-top: 80px;
+}
+
+h1 {
+  color: #ff0066;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 18px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#yesBtn {
+  background-color: #ff4d88;
+  color: white;
+}
+
+#noBtn {
+  background-color: grey;
+  color: white;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #cc0066;
+  padding: 10px;
+}
+
+.photo {
+  margin-top: 20px;
+  width: 250px;
+  border-radius: 15px;
+  display: none;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Will You Be My Valentine? 💖</h1>
+
+<button id="yesBtn" onclick="yesClicked()">Yes 💘</button>
+<button id="noBtn" onclick="noClicked()">No 😜</button>
+
+<div id="result"></div>
+
+<!-- Updated Image -->
+<a href="https://ibb.co/pB8K0mmb" target="_blank">
+  <img id="photo1" class="photo"
+  src="https://i.ibb.co/Kpks011b/IMG-20260117-WA0125.jpg"
+  alt="IMG-20260117-WA0125" border="0">
+</a>
+
+<script>
+let noCount = 0;
+
+function yesClicked() {
+  document.getElementById("result").innerHTML =
+  "என் உயிரே ❤️ என் வாழ்க்கையின் அழகான அத்தியாயம் நீ தான் 💞 <br><br> \
+  ஒவ்வொரு நாளும் உன்னுடன் வாழ்வது என் வாழ்நாள் வரம் 😘✨ <br><br> \
+  இந்த உலகம் முழுவதும் இருந்தாலும், என் மனசுக்கு பிடித்த இடம் உன் அருகில் தான் 🥰💕 <br><br> \
+  என்றும் என்றும் என் காதலனாக, என் கணவராக, என் வாழ்வின் ஒரே காதலாக இருப்பாயா? 💍❤️ <br><br> \
+  Love you endlessly my forever Valentine 💖";
+
+  document.getElementById("photo1").style.display = "block";
+}
+
+function noClicked() {
+  noCount++;
+
+  if(noCount == 1){
+    document.getElementById("result").innerHTML =
+    "No option not supported on this device 😜💻";
+  }
+  else if(noCount == 2){
+    document.getElementById("result").innerHTML =
+    "System Error ⚠️ Only YES button working 😂💘";
+  }
+  else if(noCount == 3){
+    document.getElementById("result").innerHTML =
+    "Warning! Searching for NO will uninstall it 🤭";
+  }
+  else if(noCount == 4){
+    document.getElementById("result").innerHTML =
+    "Loading... Loading... Only YES available 💞";
+  }
+  else {
+    document.getElementById("result").innerHTML =
+    "Nice try husband 😂 but destiny already clicked YES ❤️";
+    document.getElementById("noBtn").style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
